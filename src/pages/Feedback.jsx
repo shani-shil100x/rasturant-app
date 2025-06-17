@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Star, MessageSquare, ThumbsUp, Send } from 'lucide-react';
 
@@ -78,9 +77,9 @@ const Feedback = () => {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Feedback Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8 animate-fade-in">
+          <div className="bg-white rounded-lg shadow-lg p-8 animate-fade-in h-fit">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
               <MessageSquare className="h-8 w-8 text-orange-500 mr-3" />
               Share Your Experience

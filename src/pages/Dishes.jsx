@@ -48,7 +48,7 @@ const Dishes = () => {
       name: "Pasta Carbonara",
       price: "$19.99",
       category: "Main Course",
-      image: "https://images.unsplash.com/photo-1588013273468-315900bafd4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.6,
       description: "Traditional Italian pasta with eggs, cheese, and pancetta"
     },
