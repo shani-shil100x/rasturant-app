@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Star, Filter } from 'lucide-react';
 
@@ -13,7 +12,7 @@ const Dishes = () => {
       name: "Grilled Salmon",
       price: "$24.99",
       category: "Main Course",
-      image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1485921325833-c519f76c4927?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.8,
       description: "Fresh Atlantic salmon grilled to perfection with herbs and lemon"
     },
@@ -22,7 +21,7 @@ const Dishes = () => {
       name: "Beef Steak",
       price: "$32.99",
       category: "Main Course",
-      image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.9,
       description: "Premium cut beef steak cooked to your preference with seasonal vegetables"
     },
@@ -31,7 +30,7 @@ const Dishes = () => {
       name: "Caesar Salad",
       price: "$16.99",
       category: "Appetizers",
-      image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.7,
       description: "Crisp romaine lettuce with parmesan cheese and homemade croutons"
     },
@@ -40,7 +39,7 @@ const Dishes = () => {
       name: "Chocolate Cake",
       price: "$12.99",
       category: "Desserts",
-      image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.9,
       description: "Rich chocolate cake with layers of chocolate ganache and berries"
     },
@@ -49,7 +48,7 @@ const Dishes = () => {
       name: "Pasta Carbonara",
       price: "$19.99",
       category: "Main Course",
-      image: "https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1588013273468-315900bafd4c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.6,
       description: "Traditional Italian pasta with eggs, cheese, and pancetta"
     },
@@ -58,7 +57,7 @@ const Dishes = () => {
       name: "Bruschetta",
       price: "$9.99",
       category: "Appetizers",
-      image: "https://images.unsplash.com/photo-1572441713132-51c75654db73?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.5,
       description: "Toasted bread topped with fresh tomatoes, basil, and garlic"
     },
@@ -67,7 +66,7 @@ const Dishes = () => {
       name: "Tiramisu",
       price: "$10.99",
       category: "Desserts",
-      image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.8,
       description: "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone"
     },
@@ -76,7 +75,7 @@ const Dishes = () => {
       name: "Fresh Lemonade",
       price: "$5.99",
       category: "Beverages",
-      image: "https://images.unsplash.com/photo-1523371683702-af5cd0c43c2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.4,
       description: "Refreshing homemade lemonade with fresh mint and ice"
     },
@@ -85,7 +84,7 @@ const Dishes = () => {
       name: "Chicken Wings",
       price: "$14.99",
       category: "Appetizers",
-      image: "https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       rating: 4.7,
       description: "Crispy chicken wings with your choice of sauce"
     }
