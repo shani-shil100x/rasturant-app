@@ -50,8 +50,12 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-screen bg-gradient-to-r from-orange-600 to-red-600 flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+      <section 
+        className="relative h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center text-white"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80')`
+        }}
+      >
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 animate-fade-in">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-scale-in">
             Welcome to Delicious
