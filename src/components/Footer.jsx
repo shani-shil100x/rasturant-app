@@ -17,13 +17,13 @@ const Footer = () => {
               Experience the finest dining with our carefully crafted dishes made from fresh, local ingredients.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="https://www.facebook.com/" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="https://x.com/" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="https://www.instagram.com" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>

@@ -1,32 +1,31 @@
-
-import { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { useState } from "react";
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
+    alert("Thank you for your message! We will get back to you soon.");
     setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
     });
   };
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -35,26 +34,26 @@ const Contact = () => {
       icon: Phone,
       title: "Phone",
       details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      color: "text-green-600"
+      color: "text-green-600",
     },
     {
       icon: Mail,
       title: "Email",
       details: ["info@delicious.com", "reservations@delicious.com"],
-      color: "text-blue-600"
+      color: "text-blue-600",
     },
     {
       icon: MapPin,
       title: "Address",
       details: ["123 Food Street", "New York, NY 10001"],
-      color: "text-red-600"
+      color: "text-red-600",
     },
     {
       icon: Clock,
       title: "Hours",
       details: ["Mon-Fri: 11:00 AM - 10:00 PM", "Sat-Sun: 10:00 AM - 11:00 PM"],
-      color: "text-orange-600"
-    }
+      color: "text-orange-600",
+    },
   ];
 
   return (
@@ -77,13 +76,22 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in">
-                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4`}>
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
+              >
+                <div
+                  className={`inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-4`}
+                >
                   <info.icon className={`h-8 w-8 ${info.color}`} />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{info.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {info.title}
+                </h3>
                 {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-gray-600 text-sm mb-1">{detail}</p>
+                  <p key={idx} className="text-gray-600 text-sm mb-1">
+                    {detail}
+                  </p>
                 ))}
               </div>
             ))}
@@ -92,7 +100,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="bg-white rounded-lg shadow-lg p-8 animate-fade-in">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-10 flex items-center">
                 <Send className="h-8 w-8 text-orange-500 mr-3" />
                 Send us a Message
               </h2>
@@ -109,7 +117,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-                      placeholder="John Doe"
+                      placeholder="Bishal Nath"
                     />
                   </div>
                   <div>
@@ -123,7 +131,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-                      placeholder="john@example.com"
+                      placeholder="Bishal@example.com"
                     />
                   </div>
                 </div>
@@ -186,38 +194,57 @@ const Contact = () => {
             <div className="space-y-8">
               {/* Map Placeholder */}
               <div className="bg-white rounded-lg shadow-lg p-8 animate-fade-in">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Find Us</h3>
-                <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-2" />
-                    <p className="text-gray-500">Interactive Map</p>
-                    <p className="text-sm text-gray-400">123 Food Street, New York, NY 10001</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Find Us
+                </h3>
+                <div
+                  className="rounded-lg h-64 flex items-center justify-center bg-cover bg-center"
+                  style={{
+                    backgroundImage:
+                      "url('https://i.pinimg.com/736x/0a/12/13/0a12131d595ca1ac8625fc43a5a87443.jpg')",
+                  }}
+                >
+                  <div className="text-center bg-black bg-opacity-50 p-4 rounded-md">
+                    <MapPin className="h-12 w-12 text-white mx-auto mb-2" />
+                    <p className="text-white">Interactive Map</p>
+                    <p className="text-sm text-gray-200">
+                      123 Food Street, New York, NY 10001
+                    </p>
                   </div>
                 </div>
               </div>
 
               {/* Additional Info */}
               <div className="bg-white rounded-lg shadow-lg p-8 animate-fade-in">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Visit Us</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Visit Us
+                </h3>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Reservations</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Reservations
+                    </h4>
                     <p className="text-gray-600 text-sm">
-                      For reservations, please call us at least 24 hours in advance. 
-                      We accept reservations for parties of 2-12 people.
+                      For reservations, please call us at least 24 hours in
+                      advance. We accept reservations for parties of 2-12
+                      people.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Parking</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Parking
+                    </h4>
                     <p className="text-gray-600 text-sm">
-                      Free valet parking is available for all guests. Street parking 
-                      is also available nearby.
+                      Free valet parking is available for all guests. Street
+                      parking is also available nearby.
                     </p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Private Events</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">
+                      Private Events
+                    </h4>
                     <p className="text-gray-600 text-sm">
-                      We offer private dining rooms for special occasions. 
+                      We offer private dining rooms for special occasions.
                       Contact us for catering and event planning services.
                     </p>
                   </div>
@@ -243,23 +270,32 @@ const Contact = () => {
             {[
               {
                 question: "Do you take reservations?",
-                answer: "Yes, we accept reservations for parties of 2-12 people. Please call us at least 24 hours in advance."
+                answer:
+                  "Yes, we accept reservations for parties of 2-12 people. Please call us at least 24 hours in advance.",
               },
               {
                 question: "Do you offer delivery?",
-                answer: "Yes, we offer delivery within a 5-mile radius. You can order through our website or call us directly."
+                answer:
+                  "Yes, we offer delivery within a 5-mile radius. You can order through our website or call us directly.",
               },
               {
                 question: "Are you open on holidays?",
-                answer: "Our holiday hours may vary. Please check our website or call us for specific holiday schedules."
+                answer:
+                  "Our holiday hours may vary. Please check our website or call us for specific holiday schedules.",
               },
               {
                 question: "Do you accommodate dietary restrictions?",
-                answer: "Absolutely! We offer vegetarian, vegan, and gluten-free options. Please inform us of any allergies when ordering."
-              }
+                answer:
+                  "Absolutely! We offer vegetarian, vegan, and gluten-free options. Please inform us of any allergies when ordering.",
+              },
             ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 animate-fade-in">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-lg p-6 animate-fade-in"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {faq.question}
+                </h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </div>
             ))}
