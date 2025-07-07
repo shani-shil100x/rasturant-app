@@ -1,6 +1,123 @@
 import { useState } from "react";
 import { Star, Filter } from "lucide-react";
+import DiscountBadge from "../components/DiscountBadge"; // ✅ Make sure the path is correct
 
+// ✅ Move dishes outside component to persist expiresAt
+const dishes = [
+  {
+    id: 1,
+    name: "Grilled Salmon",
+    price: "₹3259",
+    discount: 20,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Main Course",
+    image:
+      "https://images.unsplash.com/photo-1485921325833-c519f76c4927?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.8,
+    description:
+      "Fresh Atlantic salmon grilled to perfection with herbs and lemon",
+  },
+  {
+    id: 2,
+    name: "Chicken Slice",
+    price: "₹3562",
+    discount: 15,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Main Course",
+    image:
+      "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.9,
+    description:
+      "Premium cut Chicken Slice cooked to your preference with seasonal vegetables",
+  },
+  {
+    id: 3,
+    name: "Caesar Salad",
+    price: "₹5259",
+    discount: 25,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Appetizers",
+    image:
+      "https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.7,
+    description:
+      "Crisp romaine lettuce with parmesan cheese and homemade croutons",
+  },
+  {
+    id: 4,
+    name: "Chocolate Cake",
+    price: "₹5659",
+    discount: 28,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Desserts",
+    image:
+      "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.9,
+    description:
+      "Rich chocolate cake with layers of chocolate ganache and berries",
+  },
+  {
+    id: 5,
+    name: "Pasta Carbonara",
+    price: "₹3359",
+    discount: 50,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Main Course",
+    image:
+      "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.6,
+    description: "Traditional Italian pasta with eggs, cheese, and pancetta",
+  },
+  {
+    id: 6,
+    name: "Bruschetta",
+    price: "₹6659",
+    discount: 22,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Appetizers",
+    image:
+      "https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.5,
+    description: "Toasted bread topped with fresh tomatoes, basil, and garlic",
+  },
+  {
+    id: 7,
+    name: "Tiramisu",
+    price: "₹9959",
+    discount: 40,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Desserts",
+    image:
+      "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.8,
+    description:
+      "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone",
+  },
+  {
+    id: 8,
+    name: "Fresh Lemonade",
+    price: "₹359",
+    discount: 20,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Beverages",
+    image:
+      "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.4,
+    description: "Refreshing homemade lemonade with fresh mint and ice",
+  },
+  {
+    id: 9,
+    name: "Chicken Wings",
+    price: "₹3549",
+    discount: 20,
+    expiresAt: Date.now() + 2 * 60 * 60 * 1000,
+    category: "Appetizers",
+    image:
+      "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    rating: 4.7,
+    description: "Crispy chicken wings with your choice of sauce",
+  },
+];
 const Dishes = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
@@ -10,105 +127,6 @@ const Dishes = () => {
     "Main Course",
     "Desserts",
     "Beverages",
-  ];
-
-  const dishes = [
-    {
-      id: 1,
-      name: "Grilled Salmon",
-      price: "₹3259",
-      category: "Main Course",
-      image:
-        "https://images.unsplash.com/photo-1485921325833-c519f76c4927?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.8,
-      description:
-        "Fresh Atlantic salmon grilled to perfection with herbs and lemon",
-    },
-    {
-      id: 2,
-      name: "Chicken Slice",
-     price: "₹3562",
-      category: "Main Course",
-      image:
-        "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.9,
-      description:
-        "Premium cut Chicken Slice cooked to your preference with seasonal vegetables",
-    },
-    {
-      id: 3,
-      name: "Caesar Salad",
-      price: "₹5259",
-      category: "Appetizers",
-      image:
-        "https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.7,
-      description:
-        "Crisp romaine lettuce with parmesan cheese and homemade croutons",
-    },
-    {
-      id: 4,
-      name: "Chocolate Cake",
-      price: "₹5659",
-      category: "Desserts",
-      image:
-        "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.9,
-      description:
-        "Rich chocolate cake with layers of chocolate ganache and berries",
-    },
-    {
-      id: 5,
-      name: "Pasta Carbonara",
-      price: "₹3359",
-      category: "Main Course",
-      image:
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.6,
-      description: "Traditional Italian pasta with eggs, cheese, and pancetta",
-    },
-    {
-      id: 6,
-      name: "Bruschetta",
-      price: "₹6659",
-      category: "Appetizers",
-      image:
-        "https://images.unsplash.com/photo-1506280754576-f6fa8a873550?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.5,
-      description:
-        "Toasted bread topped with fresh tomatoes, basil, and garlic",
-    },
-    {
-      id: 7,
-      name: "Tiramisu",
-      price: "₹9959",
-      category: "Desserts",
-      image:
-        "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.8,
-      description:
-        "Classic Italian dessert with coffee-soaked ladyfingers and mascarpone",
-    },
-    {
-      id: 8,
-      name: "Fresh Lemonade",
-      price: "₹359",
-      category: "Beverages",
-      image:
-        "https://images.unsplash.com/photo-1571091718767-18b5b1457add?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.4,
-      description: "Refreshing homemade lemonade with fresh mint and ice",
-    },
-    {
-      id: 9,
-      name: "Chicken Wings",
-      price: "₹3549",
-      category: "Appetizers",
-      image:
-        "https://images.unsplash.com/photo-1608039755401-742074f0548d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      rating: 4.7,
-      description: "Crispy chicken wings with your choice of sauce",
-    },
   ];
 
   const filteredDishes =
@@ -157,51 +175,75 @@ const Dishes = () => {
 
         {/* Dishes Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredDishes.map((dish) => (
-            <div
-              key={dish.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
-            >
-              <div className="relative">
-                <img
-                  src={dish.image}
-                  alt={dish.name}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                  {dish.price}
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {dish.name}
-                </h3>
-                <p className="text-gray-600 mb-4 text-sm">{dish.description}</p>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-4 w-4 ${
-                            i < Math.floor(dish.rating)
-                              ? "text-yellow-400 fill-current"
-                              : "text-gray-300"
-                          }`}
-                        />
-                      ))}
+          {filteredDishes.map((dish) => {
+            const hasDiscount = dish.discount > 0;
+            const numericPrice = Number(dish.price.replace("₹", ""));
+            const discountedPrice = hasDiscount
+              ? Math.floor((numericPrice * (100 - dish.discount)) / 100)
+              : numericPrice;
+
+            return (
+              <div
+                key={dish.id}
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in"
+              >
+                <div className="relative">
+                  <img
+                    src={dish.image}
+                    alt={dish.name}
+                    className="w-full h-48 object-cover"
+                  />
+
+                  {/* ✅ Discount Badge */}
+                  {hasDiscount && (
+                    <div className="absolute top-2 left-2 z-10">
+                      <DiscountBadge
+                        discountPercent={dish.discount}
+                        expiresAt={dish.expiresAt}
+                      />
                     </div>
-                    <span className="ml-2 text-gray-600 text-sm">
-                      ({dish.rating})
-                    </span>
+                  )}
+
+                  {/* ✅ Price Badge */}
+                  <div className="absolute top-2 right-2 z-10 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                    ₹{discountedPrice}
                   </div>
-                  <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
-                    Add to Cart
-                  </button>
+                </div>
+
+                {/* Dish Info */}
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {dish.name}
+                  </h3>
+                  <p className="text-gray-600 mb-4 text-sm">
+                    {dish.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <div className="flex items-center">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`h-4 w-4 ${
+                              i < Math.floor(dish.rating)
+                                ? "text-yellow-400 fill-current"
+                                : "text-gray-300"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                      <span className="ml-2 text-gray-600 text-sm">
+                        ({dish.rating})
+                      </span>
+                    </div>
+                    <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Call to Action */}
