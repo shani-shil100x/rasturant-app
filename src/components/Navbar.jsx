@@ -1,11 +1,12 @@
-
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Utensils } from 'lucide-react';
+import { AuthContext } from '../context/AuthContext'; // 🔸 Added
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { user, logout } = useContext(AuthContext); // 🔸 Added
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -44,6 +45,23 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+
+            {/* 🔸 Login / Logout Button */}
+            {user ? (
+              <button
+                onClick={logout}
+                className="px-3 py-2 bg-orange-100 text-orange-600 rounded hover:bg-orange-200"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="px-3 py-2 bg-orange-600 text-white rounded hover:bg-orange-700"
+              >
+                Login
+              </Link>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -75,6 +93,27 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
+
+              {/* 🔸 Mobile Login / Logout Button */}
+              {user ? (
+                <button
+                  onClick={() => {
+                    logout();
+                    setIsOpen(false);
+                  }}
+                  className="block w-full text-left px-3 py-2 text-orange-600 bg-orange-100 rounded hover:bg-orange-200"
+                >
+                  Logout
+                </button>
+              ) : (
+                <Link
+                  to="/login"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-3 py-2 bg-orange-600 text-white rounded hover:bg-orange-700"
+                >
+                  Login
+                </Link>
+              )}
             </div>
           </div>
         )}
