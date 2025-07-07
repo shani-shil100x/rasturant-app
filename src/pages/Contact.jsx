@@ -45,7 +45,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Food Street", "New York, NY 10001"],
+      details: ["123 Food Street", "Agartala, NY 10001"],
       color: "text-red-600",
     },
     {
