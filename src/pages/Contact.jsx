@@ -208,7 +208,7 @@ const Contact = () => {
                     <MapPin className="h-12 w-12 text-white mx-auto mb-2" />
                     <p className="text-white">Interactive Map</p>
                     <p className="text-sm text-gray-200">
-                      123 Food Street, New York, NY 10001
+                      123 Food Street, <Agartala></Agartala>, NY 10001
                     </p>
                   </div>
                 </div>
