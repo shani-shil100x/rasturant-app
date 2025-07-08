@@ -33,7 +33,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["+91 9856457899", "+91 9856457568"],
       color: "text-green-600",
     },
     {
@@ -145,7 +145,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+91 9856457899"
                   />
                 </div>
                 <div>

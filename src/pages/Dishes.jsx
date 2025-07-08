@@ -256,9 +256,11 @@ const Dishes = () => {
               Can't decide? Let our chef choose the perfect meal for you with
               our chef's special combo.
             </p>
+            <a href="/order">
             <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
               Chef's Special
             </button>
+            </a>
           </div>
         </div>
       </div>

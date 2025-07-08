@@ -19,7 +19,7 @@ const About = () => {
     {
       name: "Sarah Johnson",
       role: "Pastry Chef",
-      image: "https://images.unsplash.com/photo-1594736797933-d0301ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+      image: "https://images.unsplash.com/photo-1654922207993-2952fec328ae?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       description: "Award-winning dessert specialist with a passion for creativity"
     },
     {
