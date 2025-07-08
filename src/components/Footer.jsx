@@ -1,6 +1,13 @@
-
-import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Phone, Mail, MapPin, Utensils } from 'lucide-react';
+import { Link } from "react-router-dom";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Phone,
+  Mail,
+  MapPin,
+  Utensils,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -14,16 +21,26 @@ const Footer = () => {
               <span className="text-xl font-bold">Delicious</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Experience the finest dining with our carefully crafted dishes made from fresh, local ingredients.
+              Experience the finest dining with our carefully crafted dishes
+              made from fresh, local ingredients.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a
+                href="https://www.facebook.com/"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://x.com/" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a
+                href="https://x.com/"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a
+                href="https://www.instagram.com"
+                className="text-gray-400 hover:text-orange-500 transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -33,10 +50,38 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-400 hover:text-orange-500 transition-colors">Home</Link></li>
-              <li><Link to="/dishes" className="text-gray-400 hover:text-orange-500 transition-colors">Dishes</Link></li>
-              <li><Link to="/order" className="text-gray-400 hover:text-orange-500 transition-colors">Order</Link></li>
-              <li><Link to="/about" className="text-gray-400 hover:text-orange-500 transition-colors">About Us</Link></li>
+              <li>
+                <Link
+                  to="/"
+                  className="text-gray-400 hover:text-orange-500 transition-colors"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/dishes"
+                  className="text-gray-400 hover:text-orange-500 transition-colors"
+                >
+                  Dishes
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/order"
+                  className="text-gray-400 hover:text-orange-500 transition-colors"
+                >
+                  Order
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="text-gray-400 hover:text-orange-500 transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -54,7 +99,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-orange-500" />
-                <span className="text-gray-400">123 Food Street, City</span>
+                <span className="text-gray-400">123 Food Street, Agartala</span>
               </li>
             </ul>
           </div>
